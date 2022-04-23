@@ -1,0 +1,331 @@
+/*
+- - - - - - - - - - - - - - - - - -
+Andreas Läber
+(c) 2022, All rights reserved.
+	
+Design:
+Andreas Läber
+	
+Code:
+Andreas Läber
+www.andreaslaeber.ch
+- - - - - - - - - - - - - - - - - -	
+*/
+
+@font-face {
+  font-family: myfont2;
+  src: url(/fonts/VG5000-Regular_web.woff2)
+}
+
+@font-face {
+  font-family: myfont;
+  src: url(/fonts/Favorit_Regular.otf)
+}
+
+:root {
+  font-family: myfont;
+  cursor: url(/img/❤️.svg), auto;
+  font-size: .9em;
+  letter-spacing: .025em;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+
+#infobutton {
+  background-color: rgb(0, 0, 0, 0);
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+  border: none;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: none;
+  mix-blend-mode: normal;
+  cursor: pointer;
+  animation: shake 2s infinite linear alternate-reverse;
+}
+
+.mail {
+  color: black;
+  cursor: pointer;
+  line-height: 31px;  
+}
+
+#infobox {
+  position: fixed;
+  z-index: 1000;
+  display: none;
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
+  width: 340px;
+  border-radius: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  box-sizing: border-box; 
+  box-shadow: 0 0 12em rgb(0, 0, 0);
+}
+
+
+.close {
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+	font: inherit;
+  font-size: 1em;
+  margin: 0px 3px 0px 3px;
+  padding: 10px;
+  text-transform: uppercase; 
+  text-align: center;
+  width: 324px;
+  outline: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.infotext {
+  text-align: left;
+  padding: 15px 15px 15px 15px;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+a:link.mail {
+  padding: 5px 10px 2.5px 10px;
+  border-radius: 15px;
+  background-color: rgb(225, 225, 225);
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a.weblink {
+  color: white;
+}
+
+.fixed_header {
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+  right: 20px;
+  bottom: 15px;
+  position: fixed;
+  z-index: 20;
+}
+
+.nav_menu {
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+  width: auto;
+  display: flex;
+  position: fixed;
+  z-index: 20;
+  justify-content: space-between;
+}
+
+.align-start, .element, article {
+  scroll-snap-align: start;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh ;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1px;
+  align-content: center;
+  overflow: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(300px);
+  scroll-snap-points-x: repeat(300px);
+}  
+
+.wrapper, .element {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-stop: normal;
+  position: relative;
+  object-fit: cover;
+}
+
+.both-mandatory {
+  scroll-snap-type: both mandatory;
+}  
+
+.arrow {
+  font-family: myfont2;
+}
+
+.down {
+  font-size: 2em;
+  position: absolute;
+  bottom: 15px;
+  mix-blend-mode: difference;
+}
+  
+.introtext {
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding: 25px 30px 25px 30px;
+  border-radius: 0px;
+}
+
+.intro {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tags1, .tags2, .tags3, .tags4, .tags5 {
+  color: white;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0;
+  border-radius: 15px;
+  text-transform: uppercase;
+
+}
+
+.tag1 {
+  animation: skew 1.5s infinite linear alternate-reverse;
+}
+
+.tag1, .tag2, .tag3, .tag4 {
+  margin: 0 7px 7px 0;
+  padding: 5px 10px 2.5px 10px;
+  border-radius: 0px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);  
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+a.weblink {
+  margin: 0 7px 7px 0;
+  padding: 5px 10px 2.5px 10px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);  
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+article {
+  max-width: none !important;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+article .videos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+article .videos video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+article .videos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+article .videos video.video-dt {
+  display: none;
+}
+
+article .videos img.video-dt {
+  display: none;
+}
+
+@media (min-width: 900px) {
+    article .videos video {
+    width: calc(100% / 2);
+  }
+    article .videos video.video-mob {
+    display: none;
+  }
+    article .videos video.video-dt {
+    display: initial;
+  }
+}
+
+@media (min-width: 900px) {
+    article .videos img {
+    width: calc(100% / 2);
+  }
+    article .videos img.video-mob {
+    display: none;
+  }
+    article .videos img.video-dt {
+    display: initial;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes skew {
+  from {
+    transform: skew(7deg, 7deg);
+  }
+  to {
+    transform: skew(-7deg, -7deg);
+  
+  }
+}
